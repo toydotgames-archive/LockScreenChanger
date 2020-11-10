@@ -34,7 +34,14 @@ Use your favourite terminal for this. No dependencies. Just Java.
  ```cmd
  java src/GUI.java
  ```
-
+### From the [Releases](https://github.com/Toydotgame/LockScreenChanger/releases) Tab
+1. Download the latest `.jar` file.
+2. Move the file to the location of a `.jpg` file you'd like to set as your lock screen. (In the same folder)
+3. Run the `.jar`.
+4. Enter the file information: <br>
+ ![](Window.png) <br>
+ a) The name of the new background you want. (_Make sure it's a `.jpg` file!_) <br>
+ b) The JPEG filename of the image in `C:\Program Files\images\`. In my school's case: `1.jpg`, `2.jpg`, or `7.jpg`.
 
 ## Planned Features: (Not certain that they'll be in the app, though!)
 * Command-line launch arguments
