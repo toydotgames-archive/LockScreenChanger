@@ -63,17 +63,22 @@ public class GUI implements ActionListener {
 		boolean newFilenameCorrectBoolean = newFilename.endsWith(".jpg");
 		String newFilenameCorrect = String.valueOf(newFilenameCorrectBoolean);
 		if(newFilenameCorrect == "true") {
-			System.out.println("newFilename is correct.");
+			System.out.println("The new image is a JPEG!");
 		} else {
-			System.out.println("newFilename is incorrect.");
+			System.out.println("The new image is the incorrect file type. Please try again with a JPEG.");
 		}
 		
 		boolean oldFilenameCorrectBoolean = oldFilename.endsWith(".jpg");
 		String oldFilenameCorrect = String.valueOf(oldFilenameCorrectBoolean);
 		if(oldFilenameCorrect == "true") {
-			System.out.println("oldFilename is correct.");
+			System.out.println("The old image is a JPEG!");
 		} else {
-			System.out.println("oldFilename is incorrect.");
+			System.out.println("The old image is the incorrect file type. Please try again with a JPEG.");
 		}
+		
+		/* Write this command to the batch file you create:
+		 * rename 2.jpg 1.jpg && xcopy 1.jpg test\1.jpg /y
+		 * Where 2.jpg is the new image, and 1.jpg is the default one to be overwritten.
+		 */
 	}
 }
