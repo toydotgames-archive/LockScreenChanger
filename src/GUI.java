@@ -68,20 +68,20 @@ public class GUI implements ActionListener {
 		String newFilename = newImageFilenamePrompt.getText();
 		String oldFilename = oldImageFilenamePrompt.getText();
 		
-		boolean newFilenameCorrectBoolean = newFilename.endsWith(".jpg") || newFilename.endsWith(".png");
+		boolean newFilenameCorrectBoolean = newFilename.endsWith(".jpg") || newFilename.endsWith(".png") || newFilename.endsWith(".bmp");
 		String newFilenameCorrect = String.valueOf(newFilenameCorrectBoolean);
 		if(newFilenameCorrect == "true") {
-			System.out.println("The new image is a JPEG or PNG!");
+			System.out.println("The new image is a JPEG, PNG, or Bitmap!");
 		} else {
-			System.out.println("The new image is the incorrect file type. Please try again with a JPEG.");
+			System.out.println("The new image is the incorrect file type. Please try again with a JPEG, PNG, or Bitmap.");
 		}
 		
-		boolean oldFilenameCorrectBoolean = oldFilename.endsWith(".jpg") || oldFilename.endsWith(".png");
+		boolean oldFilenameCorrectBoolean = oldFilename.endsWith(".jpg") || oldFilename.endsWith(".png") || newFilename.endsWith(".bmp");
 		String oldFilenameCorrect = String.valueOf(oldFilenameCorrectBoolean);
 		if(oldFilenameCorrect == "true") {
-			System.out.println("The old image is a JPEG or PNG!");
+			System.out.println("The old image is a JPEG, PNG, or Bitmap!");
 		} else {
-			System.out.println("The old image is the incorrect file type. Please try again with a JPEG.");
+			System.out.println("The old image is the incorrect file type. Please try again with a JPEG, PNG, or Bitmap.");
 		}
 		
 		if(newFilenameCorrect == "true" && oldFilenameCorrect == "true") {
@@ -95,7 +95,7 @@ public class GUI implements ActionListener {
 				e1.printStackTrace();
 			}
 		} else {
-			System.out.println("At least one of the files specified are of incorrect syntax. Try again with .jpg files.");
+			System.out.println("At least one of the files specified are of incorrect syntax. Try again with a .jpg, .png, or .bmp file.");
 		}
 	}
 		
