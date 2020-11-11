@@ -71,9 +71,9 @@ public class GUI implements ActionListener {
 		boolean newFilenameCorrectBoolean = newFilename.endsWith(".jpg") || newFilename.endsWith(".png") || newFilename.endsWith(".bmp");
 		String newFilenameCorrect = String.valueOf(newFilenameCorrectBoolean);
 		if(newFilenameCorrect == "true") {
-			System.out.println("The new image is a JPEG, PNG, or Bitmap!");
+			System.out.print("The new image is a JPEG, PNG, or Bitmap! + ");
 		} else {
-			System.out.println("The new image is the incorrect file type. Please try again with a JPEG, PNG, or Bitmap.");
+			System.out.print("The new image is the incorrect file type. Please try again with a JPEG, PNG, or Bitmap. + ");
 		}
 		
 		boolean oldFilenameCorrectBoolean = oldFilename.endsWith(".jpg") || oldFilename.endsWith(".png") || newFilename.endsWith(".bmp");
@@ -89,7 +89,6 @@ public class GUI implements ActionListener {
 			writeCommandToBatch();
 			try {
 				Runtime.getRuntime().exec("cmd /c start \"\" run.bat");
-				System.out.println("File ran successfully.");
 				successText.setText("File run successfully. You can close the app.");
 			} catch (IOException e1) {
 				e1.printStackTrace();
@@ -103,15 +102,12 @@ public class GUI implements ActionListener {
 		try {
 			File outputFile = new File("run.bat");
 			if(outputFile.createNewFile()) {
-				System.out.println("File created as \"run.bat\"");
 				successText.setText("File successfully created.");
 			} else {
-				System.out.println("Unable to create file.");
 				successText.setText("File already exists.");
 			}
 		} catch (IOException e) {
-			System.out.println("Java could not create the file. It may already exist or the jarfile does not have sufficient priveleges.");
-			successText.setText("Java could not create the file");
+			successText.setText("Java could not create the file.");
 			e.printStackTrace();
 		}
 	}
@@ -119,11 +115,9 @@ public class GUI implements ActionListener {
 	private static void writeCommandToBatch() { // This method is also from Toydotgame/batFileGenerator
 		String newFilename = newImageFilenamePrompt.getText();
 		String oldFilename = oldImageFilenamePrompt.getText();
-		String outputBatchName = "run.bat";
-		System.out.println("Successfully accessed \"run.bat\"");
 		
 		try {
-			FileWriter myWriter = new FileWriter(outputBatchName);
+			FileWriter myWriter = new FileWriter("run.bat");
 			
 			myWriter.write("@echo off\n");
 			myWriter.write(":: BatchGotAdmin\n");
@@ -156,7 +150,6 @@ public class GUI implements ActionListener {
 			
 			myWriter.close();
 		} catch (IOException e) {
-			System.out.println("Could not write to access file. Check that the file exists and that the jarfile has sufficient priveleges.");
 			successText.setText("Could not write to output file.");
 			e.printStackTrace();
 		}
