@@ -48,7 +48,8 @@ Use your favourite terminal for this. No dependencies. Just Java.
 	* See issue [#2](https://github.com/Toydotgame/LockScreenChanger/issues/2).
 * I get a "_Windows cannot find "run.bat"._" error.
 	* This means you've put the JARfile in an admin-protected folder. Move it to one that is not. (e.g: Don't put it in `C:\Program Files\`, `C:\Windows\`, or `C:\ProgramData\`)
-	* This problem is addressed in issue [#1](https://github.com/Toydotgame/LockScreenChanger/issues/1).
+	* This problem is addressed in issue [#1](https://github.com/Toydotgame/LockScreenChanger/issues/1). <br>
+
 If you have a different problem; please open a new issue in the [Issues tab](https://github.com/Toydotgame/LockScreenChanger/issues/).
 
 ## Planned Features: (Not certain that they'll be in the app, though!)
