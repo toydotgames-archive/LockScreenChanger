@@ -45,7 +45,6 @@ Use your favourite terminal for this. No dependencies. Just Java.
 
 ## Planned Features: (Not certain that they'll be in the app, though!)
 * Command-line launch arguments
- * Either with:
-  * A seperate version without a GUI which does it straight away; or
-  * The current version accepting flags and then running without the GUI and automatically proceeding
-* Alternate branch for `.png` files; as the current one uses JPEGs only.
+	* Either with:
+		* A seperate version without a GUI which does it straight away; or
+		* The current version accepting flags and then running without the GUI and automatically proceeding
