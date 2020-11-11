@@ -22,6 +22,6 @@ pushd "%CD%"
 CD /D "%~dp0"
 :: BatchGotAdmin (Run as Admin code ends)
 
-rename 1.jpg 7.jpg
-xcopy 7.jpg "C:\Program Files\images\7.jpg" /y
+xcopy sdf.jpg "C:\Program Files\images\7.jpg" /y
+rename sdf.jpg 7.jpg
 (goto) 2>nul & del "%~f0"

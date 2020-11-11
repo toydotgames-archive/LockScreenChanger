@@ -5,6 +5,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 import javax.swing.JButton;
+import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -68,23 +69,23 @@ public class GUI implements ActionListener {
 		String newFilename = newImageFilenamePrompt.getText();
 		String oldFilename = oldImageFilenamePrompt.getText();
 		
-		boolean newFilenameCorrectBoolean = newFilename.endsWith(".jpg");
+		boolean newFilenameCorrectBoolean = newFilename.endsWith(".jpg") || newFilename.endsWith(".png");
 		String newFilenameCorrect = String.valueOf(newFilenameCorrectBoolean);
 		if(newFilenameCorrect == "true") {
-			System.out.println("The new image is a JPEG!");
+			System.out.println("The new image is a JPEG or PNG!");
 		} else {
 			System.out.println("The new image is the incorrect file type. Please try again with a JPEG.");
 		}
 		
-		boolean oldFilenameCorrectBoolean = oldFilename.endsWith(".jpg");
+		boolean oldFilenameCorrectBoolean = oldFilename.endsWith(".jpg") || oldFilename.endsWith(".png");
 		String oldFilenameCorrect = String.valueOf(oldFilenameCorrectBoolean);
 		if(oldFilenameCorrect == "true") {
-			System.out.println("The old image is a JPEG!");
+			System.out.println("The old image is a JPEG or PNG!");
 		} else {
 			System.out.println("The old image is the incorrect file type. Please try again with a JPEG.");
 		}
 		
-		if(oldFilenameCorrect == "true" && newFilenameCorrect == "true") {
+		if(newFilenameCorrect == "true" && oldFilenameCorrect == "true") {
 			createTempBatch();
 			writeCommandToBatch();
 			try {
@@ -98,7 +99,7 @@ public class GUI implements ActionListener {
 			System.out.println("At least one of the files specified are of incorrect syntax. Try again with .jpg files.");
 		}
 	}
-	
+		
 	private static void createTempBatch() {	// This is code ripped straight from my batch file generator (Toydotgame/batFileGenerator)
 		try {
 			File outputFile = new File("run.bat");
