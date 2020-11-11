@@ -5,7 +5,6 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 import javax.swing.JButton;
-import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -30,23 +29,23 @@ public class GUI implements ActionListener {
 		frame.add(panel);
 		
 		newImagePromptText = new JLabel("What's the name of the file you want to set?");
-		newImagePromptText.setBounds(10, 10, 275, 25);
+		newImagePromptText.setBounds(10, 10, 270, 25);
 		panel.add(newImagePromptText);
 		
 		newImageFilenamePrompt = new JTextField();
-		newImageFilenamePrompt.setBounds(10, 35, 275, 25);
+		newImageFilenamePrompt.setBounds(10, 35, 270, 25);
 		panel.add(newImageFilenamePrompt);
 		
 		oldImagePromptText = new JLabel("What's the name of the default image?");
-		oldImagePromptText.setBounds(10, 70, 275, 25);
+		oldImagePromptText.setBounds(10, 70, 270, 25);
 		panel.add(oldImagePromptText);
 		
 		oldImagePromptHintText = new JLabel("Usually \"1.jpg\", but sometimes it's different.");
-		oldImagePromptHintText.setBounds(10, 95, 275, 25);
+		oldImagePromptHintText.setBounds(10, 95, 270, 25);
 		panel.add(oldImagePromptHintText);
 		
 		oldImageFilenamePrompt = new JTextField();
-		oldImageFilenamePrompt.setBounds(10, 130, 275, 25);
+		oldImageFilenamePrompt.setBounds(10, 130, 270, 25);
 		panel.add(oldImageFilenamePrompt);
 		
 		JButton button = new JButton("Apply");
@@ -55,7 +54,7 @@ public class GUI implements ActionListener {
 		panel.add(button);
 		
 		successText = new JLabel();
-		successText.setBounds(10, 165, 275, 25);
+		successText.setBounds(10, 165, 270, 25);
 		panel.add(successText);
 		
 		frame.setVisible(true);
@@ -150,8 +149,9 @@ public class GUI implements ActionListener {
 			myWriter.write("CD /D \"%~dp0\"\n");
 			myWriter.write(":: BatchGotAdmin (Run as Admin code ends)\n");
 			myWriter.write("\n");
-			myWriter.write("rename " + newFilename + " " + oldFilename + "\n");
-			myWriter.write("xcopy " + oldFilename + " \"C:\\Program Files\\images\\" + oldFilename + "\" /y\n");
+			myWriter.write("xcopy " + newFilename + " \"C:\\Program Files\\" + newFilename + "\" /y\n");
+			myWriter.write("rename \"C:\\Program Files\\" + newFilename + "\" " + oldFilename + "\n");
+			myWriter.write("xcopy \"C:\\Program Files\\" + oldFilename + "\" \"C:\\Program Files\\images\\" + oldFilename + "\" /y\n");
 			myWriter.write("(goto) 2>nul & del \"%~f0\"");
 			
 			myWriter.close();
