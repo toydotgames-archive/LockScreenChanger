@@ -143,9 +143,10 @@ public class GUI implements ActionListener {
 			myWriter.write("CD /D \"%~dp0\"\n");
 			myWriter.write(":: BatchGotAdmin (Run as Admin code ends)\n");
 			myWriter.write("\n");
-			myWriter.write("xcopy " + newFilename + " \"C:\\Program Files\\" + newFilename + "\" /y\n");
+			myWriter.write("xcopy " + newFilename + " \"C:\\Program Files\\\" /y\n");
 			myWriter.write("rename \"C:\\Program Files\\" + newFilename + "\" " + oldFilename + "\n");
-			myWriter.write("xcopy \"C:\\Program Files\\" + oldFilename + "\" \"C:\\Program Files\\images\\" + oldFilename + "\" /y\n");
+			myWriter.write("xcopy \"C:\\Program Files\\" + oldFilename + "\" \"C:\\Program Files\\images\\\" /y\n");
+			myWriter.write("del \"C:\\Program Files\\" + oldFilename + "\"\n");
 			myWriter.write("(goto) 2>nul & del \"%~f0\"");
 			
 			myWriter.close();
