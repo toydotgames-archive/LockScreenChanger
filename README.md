@@ -14,9 +14,9 @@ It then creates a Batch script because I'm more comfortable with Batch for files
 It runs the Batch file afterwards, and does all of the file replacing.
 Wonderful! The lock screen should stay in the new state until a domain policy update and/or a system drain.
 
-## Installation & Using
-### Directly From Source
-Use your favourite terminal for this. No dependencies. Just Java.
+## Using
+### Running Directly From Source
+No dependencies. (Except Java!)
 1. Clone the project: <br>
   **GitHub CLI:**
   ```cmd
@@ -34,14 +34,16 @@ Use your favourite terminal for this. No dependencies. Just Java.
  ```cmd
  java src/GUI.java
  ```
-### From the [Releases](https://github.com/Toydotgame/LockScreenChanger/releases) Tab
+ 
+### Running From a Pre-compiled `.JAR`
+#### From the [Releases](https://github.com/Toydotgame/LockScreenChanger/releases) Tab
 1. Download the latest `.jar` file.
 2. Move the file to the location of a `.jpg` file you'd like to set as your lock screen. (In the same folder)
 3. Run the `.jar`.
 4. Enter the file information: <br>
  ![](Window.png) <br>
  a) The name of the new background you want. (_Make sure it's a `.jpg` file!_) <br>
- b) The JPEG filename of the image in `C:\Program Files\images\`. In my school's case: `1.jpg`, `2.jpg`, or `7.jpg`.
+ b) The JPEG filename of the image in `C:\Program Files\images\`. (In my school's case: `1.jpg` or `7.jpg`.)
 
 ## Help
 * It says `Command Prompt has been disabled by your administrator...` after I press _Apply_!
