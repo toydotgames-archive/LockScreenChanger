@@ -18,11 +18,11 @@ Wonderful! The lock screen should stay in the new state until a domain policy up
 ### Running Directly From Source
 No dependencies. (Except Java!)
 1. Clone the project: <br>
-  **GitHub CLI:**
+  **[GitHub CLI](https://github.com/cli/cli):**
   ```cmd
   gh repo clone Toydotgame/LockScreenChanger
   ```
-  **Git:**
+  **[Git](https://git-scm.com):**
   ```cmd
   git clone https://github.com/Toydotgame/LockScreenChanger
   ```
