@@ -68,7 +68,7 @@ public class GUI implements ActionListener {
 		String newFilename = newImageFilenamePrompt.getText();
 		String oldFilename = oldImageFilenamePrompt.getText();
 		
-		boolean newFilenameCorrectBoolean = newFilename.endsWith(".jpg") || newFilename.endsWith(".jpeg") || newFilename.endsWith(".png") || newFilename.endsWith(".bmp");
+		boolean newFilenameCorrectBoolean = newFilename.endsWith(".jpg") || newFilename.endsWith(".jpeg") || newFilename.endsWith(".png") || newFilename.endsWith(".bmp") || newFilename.endsWith(".tif") || newFilename.endsWith(".tiff");
 		String newFilenameCorrect = String.valueOf(newFilenameCorrectBoolean);
 		if(newFilenameCorrect == "true") {
 			System.out.print("The new image is a JPEG, PNG, or Bitmap! + ");
@@ -76,7 +76,7 @@ public class GUI implements ActionListener {
 			System.out.print("The new image is the incorrect file type. Please try again with a JPEG, PNG, or Bitmap. + ");
 		}
 		
-		boolean oldFilenameCorrectBoolean = oldFilename.endsWith(".jpg") || oldFilename.endsWith(".jpeg") || oldFilename.endsWith(".png") || newFilename.endsWith(".bmp");
+		boolean oldFilenameCorrectBoolean = oldFilename.endsWith(".jpg") || oldFilename.endsWith(".jpeg") || oldFilename.endsWith(".png") || oldFilename.endsWith(".bmp") || newFilename.endsWith(".tif") || newFilename.endsWith(".tiff");
 		String oldFilenameCorrect = String.valueOf(oldFilenameCorrectBoolean);
 		if(oldFilenameCorrect == "true") {
 			System.out.println("The old image is a JPEG, PNG, or Bitmap!");
