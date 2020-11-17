@@ -44,6 +44,14 @@ No dependencies. (Except Java!)
  ![](Frame.png) <br>
  a) The name of the new background you want. (_Make sure it's a `.jpg` file!_) <br>
  b) The JPEG filename of the image in `C:\Program Files\images\`. (In my school's case: `1.jpg` or `7.jpg`.)
+ 
+ ### Compatible Filetypes
+ Name | Extension
+ ---- | ----
+ PNG | `.png`
+ JPEG | `.jpg` or `.jpeg`
+ Bitmap | `.bmp`
+ TIFF | `.tif` or `.tiff`
 
 ## Help
 * It says `Command Prompt has been disabled by your administrator...` after I press _Apply_!
