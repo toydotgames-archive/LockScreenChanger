@@ -59,3 +59,4 @@ If you have a different problem; please open a new issue in the [Issues tab](htt
 	* Either with:
 		* A seperate version without a GUI which does it straight away; or
 		* The current version accepting flags and then running without the GUI and automatically proceeding
+* `.tif` support
