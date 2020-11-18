@@ -3,7 +3,7 @@
 I believe there's two registry keys that organisations can enforce on their domain's computers, where the user is unable to change the lock screen image in Windows 10 and the image is set to a predefined one - each of these events is a key respectively.
 ##### Another problem solvable by switching to Arch, btw!
 Anyway, the way the predefined image is set is by placing it in the `C:\Program Files\images\` directory. Usually the default is `1.jpg` in there; but it may change due to an event. National Recycling Week happened and that's what spurred me to create this automated application to automate the process I'd been already doing manually. The National Recycling Week lock screen image was put in `C:\Program Files\images\` too, and its name was `7.jpg`.
-This project currently only works with `.jpg` files.
+See the **_Compatible Filetypes_** table in the **Using** section to see what we support.
 
 I've made this project Open Source / Source-avaliable on GitHub here in case anyone else is interested or they suffer a similar limitation from their IT team.
 
@@ -18,11 +18,11 @@ Wonderful! The lock screen should stay in the new state until a domain policy up
 ### Running Directly From Source
 No dependencies. (Except Java!)
 1. Clone the project: <br>
-  **GitHub CLI:**
+  **[GitHub CLI](https://github.com/cli/cli):**
   ```cmd
   gh repo clone Toydotgame/LockScreenChanger
   ```
-  **Git:**
+  **[Git](https://git-scm.com):**
   ```cmd
   git clone https://github.com/Toydotgame/LockScreenChanger
   ```
@@ -44,6 +44,14 @@ No dependencies. (Except Java!)
  ![](Frame.png) <br>
  a) The name of the new background you want. (_Make sure it's a `.jpg` file!_) <br>
  b) The JPEG filename of the image in `C:\Program Files\images\`. (In my school's case: `1.jpg` or `7.jpg`.)
+ 
+ ### Compatible Filetypes
+ Name | Extension
+ ---- | ----
+ PNG | `.png`
+ JPEG | `.jpg` or `.jpeg`
+ Bitmap | `.bmp`
+ TIFF | `.tif` or `.tiff`
 
 ## Help
 * It says `Command Prompt has been disabled by your administrator...` after I press _Apply_!
@@ -59,4 +67,3 @@ If you have a different problem; please open a new issue in the [Issues tab](htt
 	* Either with:
 		* A seperate version without a GUI which does it straight away; or
 		* The current version accepting flags and then running without the GUI and automatically proceeding
-* `.tif` support

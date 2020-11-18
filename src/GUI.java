@@ -73,15 +73,16 @@ public class GUI implements ActionListener {
 		if(newFilenameCorrect == "true") {
 			System.out.print("The new image is a JPEG, PNG, or Bitmap! + ");
 		} else {
-			System.out.print("The new image is the incorrect file type. Please try again with a JPEG, PNG, or Bitmap. + ");
+			System.out.print("The new image is the incorrect file type. Please try again with a supported one. + ");
 		}
 		
-		boolean oldFilenameCorrectBoolean = oldFilename.endsWith(".jpg") || oldFilename.endsWith(".jpeg") || oldFilename.endsWith(".png") || oldFilename.endsWith(".bmp") || newFilename.endsWith(".tif") || newFilename.endsWith(".tiff")  || oldFilename.endsWith(".jfif");
+		boolean oldFilenameCorrectBoolean = oldFilename.endsWith(".jpg") || oldFilename.endsWith(".jpeg") || oldFilename.endsWith(".png") || oldFilename.endsWith(".bmp") || oldFilename.endsWith(".tif") || oldFilename.endsWith(".tiff")  || oldFilename.endsWith(".jfif");
+
 		String oldFilenameCorrect = String.valueOf(oldFilenameCorrectBoolean);
 		if(oldFilenameCorrect == "true") {
 			System.out.println("The old image is a JPEG, PNG, or Bitmap!");
 		} else {
-			System.out.println("The old image is the incorrect file type. Please try again with a JPEG, PNG, or Bitmap.");
+			System.out.println("The old image is the incorrect file type. Please try again with a supported one.");
 		}
 		
 		if(newFilenameCorrect == "true" && oldFilenameCorrect == "true") {
