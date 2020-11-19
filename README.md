@@ -49,7 +49,7 @@ No dependencies. (Except Java!)
  Name | Extension
  ---- | ----
  PNG | `.png`
- JPEG | `.jpg` or `.jpeg`
+ JPEG | `.jpg`, `.jpeg` or `.jfif`
  Bitmap | `.bmp`
  TIFF | `.tif` or `.tiff`
 
