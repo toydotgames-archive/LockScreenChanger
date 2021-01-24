@@ -67,3 +67,5 @@ If you have a different problem; please open a new issue in the [Issues tab](htt
 	* Either with:
 		* A seperate version without a GUI which does it straight away; or
 		* The current version accepting flags and then running without the GUI and automatically proceeding
+* Replace Windows Batch Script with in-built Java file operations.
+	* This is due to some computers having very broken Command Prompts on our network. Hopefully, reducing dependence on Windows and moving everything to my Java application should make it more future-proof.
